@@ -44,7 +44,7 @@ def plot_pie_and_table(data, value_col, pie_title, header_color="#FFA07A", row_c
     for col in range(n_cols):
         table.auto_set_column_width([col])
     for key, cell in table.get_celld().items():
-        cell.set_fontsize(8)
+        cell.set_fontsize(5)
         row, col = key
         if row == 0:
             cell.set_text_props(weight="bold", color="black")  # header text bold
@@ -62,6 +62,7 @@ plot_pie_and_table(df_selection, "Sum Insured in Crore", "Sum Insured in Crore p
 # --- Claim ---
 plot_pie_and_table(df_selection, "Claim in Crore", "Claim in Crore per Crop", 
                    header_color="#90EE90", row_color="#F5FFFA", title_color="lightgreen")
+
 
 
 
