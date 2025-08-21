@@ -7,7 +7,7 @@ st.set_page_config(page_title="District And Year Wise Analysis Of Insurance Data
 df = pd.read_excel(r"Ashwin_Sharvari.xlsx")
 df["Crop"] = df["Crop"] + df["Year"].astype(str)
 
-st.title("🌾 District and Year Wise Analysis - Kharif")
+st.title("🌾 District And Year Wise Analysis Of Insurance Data-Kharif Season")
 
 st.sidebar.header("Please Select the Year:")
 year = st.sidebar.multiselect("Select the Year:", options=df["Year"].unique())
@@ -61,5 +61,6 @@ plot_pie_and_table(df_selection, "Sum Insured in Crore", "Sum Insured in Crore p
 # --- Claim ---
 plot_pie_and_table(df_selection, "Claim in Crore", "Claim in Crore per Crop", 
                    header_color="#90EE90", row_color="#F5FFFA", title_color="darkgreen")
+
 
 
