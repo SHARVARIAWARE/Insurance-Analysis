@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="District and Year Wise Analysis-Kharif", layout="wide")
+st.set_page_config(page_title="District And Year Wise Analysis Of Insurance Data-Kharif Season", layout="wide")
 df = pd.read_excel(r"C:\Users\ADMIN\Downloads\Ashwin_Sharvari.xlsx")
 df["Crop"] = df["Crop"] + df["Year"].astype(str)
 
@@ -61,3 +61,4 @@ plot_pie_and_table(df_selection, "Sum Insured in Crore", "Sum Insured in Crore p
 # --- Claim ---
 plot_pie_and_table(df_selection, "Claim in Crore", "Claim in Crore per Crop", 
                    header_color="#90EE90", row_color="#F5FFFA", title_color="darkgreen")
+
