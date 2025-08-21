@@ -23,6 +23,7 @@ def plot_pie_and_table(data, value_col, pie_title, header_color="#FFA07A", row_c
         data_sorted, values=value_col, names="Crop",
         title=f"<b style='color:{title_color};'>{pie_title}</b>"
     )
+    fig1.update_traces(textinfo="label+value")
     st.plotly_chart(fig1)
 
     # Table
@@ -61,6 +62,7 @@ plot_pie_and_table(df_selection, "Sum Insured in Crore", "Sum Insured in Crore p
 # --- Claim ---
 plot_pie_and_table(df_selection, "Claim in Crore", "Claim in Crore per Crop", 
                    header_color="#90EE90", row_color="#F5FFFA", title_color="lightgreen")
+
 
 
 
