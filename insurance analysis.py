@@ -52,13 +52,13 @@ def plot_pie_and_table(data, value_col, pie_title, header_color="#FFA07A", row_c
 
 # --- Premium ---
 plot_pie_and_table(df_selection, "Premium in Crore", "Premium Paid in Crore per Crop", 
-                   header_color="#FFCC99", row_color="#FFF8DC", title_color="darkred")
+                   header_color="#99CCFF", row_color="#F0F8FF", title_color="lightskyblue")  
 
 # --- Sum Insured ---
 plot_pie_and_table(df_selection, "Sum Insured in Crore", "Sum Insured in Crore per Crop", 
-                   header_color="#99CCFF", row_color="#F0F8FF", title_color="darkblue")
+                   header_color="#FFCC99", row_color="#FFF8DC", title_color="lightcoral")
 
 # --- Claim ---
 plot_pie_and_table(df_selection, "Claim in Crore", "Claim in Crore per Crop", 
-                   header_color="#90EE90", row_color="#F5FFFA", title_color="darkgreen")
+                   header_color="#90EE90", row_color="#F5FFFA", title_color="lightgreen")
 
