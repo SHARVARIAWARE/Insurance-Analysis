@@ -28,7 +28,7 @@ def plot_pie_and_table(data, value_col, pie_title, header_color="#FFA07A", row_c
 
     # Table
     data_sorted.reset_index(drop=True, inplace=True)
-    fig, ax = plt.subplots(1, 1, figsize=(3, 2))
+    fig, ax = plt.subplots(1, 1, figsize=(2, 1.5))
     table_data = [data_sorted.columns.tolist()] + data_sorted.values.tolist()
 
     n_rows, n_cols = len(data_sorted), len(data_sorted.columns)
@@ -39,7 +39,7 @@ def plot_pie_and_table(data, value_col, pie_title, header_color="#FFA07A", row_c
     ax.axis("tight")
     table = ax.table(cellText=table_data, cellColours=row_colors, loc="center", cellLoc="center")
     table.auto_set_font_size(False)
-    table.set_fontsize(8)
+    table.set_fontsize(5)
 
     for col in range(n_cols):
         table.auto_set_column_width([col])
@@ -62,6 +62,7 @@ plot_pie_and_table(df_selection, "Sum Insured in Crore", "Sum Insured in Crore p
 # --- Claim ---
 plot_pie_and_table(df_selection, "Claim in Crore", "Claim in Crore per Crop", 
                    header_color="#90EE90", row_color="#F5FFFA", title_color="lightgreen")
+
 
 
 
