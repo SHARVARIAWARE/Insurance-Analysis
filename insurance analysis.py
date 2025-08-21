@@ -4,6 +4,8 @@ import streamlit as st
 import matplotlib.pyplot as plt
 st.set_page_config(page_title="Distrcit and Year Wise Analysis-Kharif",layout="wide")
 df=pd.read_excel(r"C:\Users\ADMIN\Downloads\Ashwin_Sharvari.xlsx")
+df["Crop"]=df["Crop"] +df["Year"].astype(str)
+
 #st.dataframe(df)
 
 st.title("Distrcit and Year Wise Analysis-Kharif")
@@ -114,5 +116,6 @@ for key,cell in table.get_celld().items():
         cell.set_text_props(weight='bold')
 
 st.pyplot(fig)
+
 
 
